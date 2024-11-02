@@ -1,0 +1,51 @@
+version: '3'
+
+services:
+  ppanel-server:
+    image: ppanel/ppanel-server:beta
+    container_name: ppanel-server-beta
+    ports:
+      - '8081:8080'
+    volumes:
+      - ./config/ppanel.yaml:/app/etc/ppanel.yaml
+    restart: always
+    depends_on:
+      - mysql
+      - redis
+  ppanel-admin-web:
+    image: ppanel/ppanel-admin-web:beta
+    ports:
+      - '3000:3000'
+    environment:
+      # At least one of the following parameters is required. For other parameters, please refer to the project documentation.
+      NEXT_PUBLIC_SITE_URL: https://example.com
+      NEXT_PUBLIC_API_URL: https://api.example.com
+  ppanel-user-web:
+    image: ppanel/ppanel-user-web:beta
+    ports:
+      - '3001:3000'
+    environment:
+      # At least one of the following parameters is required. For other parameters, please refer to the project documentation.
+      NEXT_PUBLIC_SITE_URL: https://example.com
+      NEXT_PUBLIC_API_URL: https://api.example.com
+  mysql:
+    image: mysql:8.0.23
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: my_database
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userpassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./docker/mysql:/var/lib/mysql
+  redis:
+    image: redis:7
+    container_name: redis_cache
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./docker/redis:/data
