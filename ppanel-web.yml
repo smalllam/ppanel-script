@@ -15,7 +15,7 @@ services:
     environment:
       NEXT_PUBLIC_DEFAULT_LANGUAGE: zh-CN
       NEXT_PUBLIC_SITE_URL: https://fo3.netfly.life
-      NEXT_PUBLIC_API_URL: https://api.netfly.life
+      NEXT_PUBLIC_API_URL: 16690850f19f4af0dd87d1b11d660a32
       NEXT_PUBLIC_EMAIL: contact@example.com
       NEXT_PUBLIC_TELEGRAM_LINK: https://t.me/example
       NEXT_PUBLIC_TWITTER_LINK: https://twitter.com/example
