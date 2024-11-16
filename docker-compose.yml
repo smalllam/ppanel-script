@@ -18,16 +18,16 @@ services:
       - '3000:3000'
     environment:
       # At least one of the following parameters is required. For other parameters, please refer to the project documentation.
-      NEXT_PUBLIC_SITE_URL: https://example.com
-      NEXT_PUBLIC_API_URL: https://api.example.com
+      NEXT_PUBLIC_SITE_URL: https://fo3.netfly.life
+      NEXT_PUBLIC_API_URL: 16690850f19f4af0dd87d1b11d660a32
   ppanel-user-web:
     image: ppanel/ppanel-user-web:beta
     ports:
       - '3001:3000'
     environment:
       # At least one of the following parameters is required. For other parameters, please refer to the project documentation.
-      NEXT_PUBLIC_SITE_URL: https://example.com
-      NEXT_PUBLIC_API_URL: https://api.example.com
+      NEXT_PUBLIC_SITE_URL: https://fo3.netfly.life
+      NEXT_PUBLIC_API_URL: 16690850f19f4af0dd87d1b11d660a32
   mysql:
     image: mysql:8.0.23
     container_name: mysql_db
