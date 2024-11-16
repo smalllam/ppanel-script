@@ -7,7 +7,7 @@ services:
       - '3000:3000'
     environment:
       NEXT_PUBLIC_SITE_URL: https://fo3.netfly.life
-      NEXT_PUBLIC_API_URL: https://api.netfly.life
+      NEXT_PUBLIC_API_URL: 16690850f19f4af0dd87d1b11d660a32
   ppanel-user-web:
     image: ppanel/ppanel-user-web:beta
     ports:
