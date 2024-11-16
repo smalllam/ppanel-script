@@ -6,9 +6,9 @@ services:
     ports:
       - '3000:3000'
     environment:
-      NEXT_PUBLIC_DEFAULT_LANGUAGE: en-US
-      NEXT_PUBLIC_SITE_URL: https://example.com
-      NEXT_PUBLIC_API_URL: https://api.example.com
+      NEXT_PUBLIC_DEFAULT_LANGUAGE: zh-CN
+      NEXT_PUBLIC_SITE_URL: https://fo3.netfly.life
+      NEXT_PUBLIC_API_URL: 16690850f19f4af0dd87d1b11d660a32
       NEXT_PUBLIC_EMAIL: contact@example.com
       NEXT_PUBLIC_GITHUB_LINK: https://github.com/example/repository
       NEXT_PUBLIC_DEFAULT_USER_EMAIL: user@example.com
