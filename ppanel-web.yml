@@ -13,7 +13,7 @@ services:
     ports:
       - '3001:3000'
     environment:
-      NEXT_PUBLIC_DEFAULT_LANGUAGE: en-US
+      NEXT_PUBLIC_DEFAULT_LANGUAGE: zh-CN
       NEXT_PUBLIC_SITE_URL: https://example.com
       NEXT_PUBLIC_API_URL: https://api.example.com
       NEXT_PUBLIC_EMAIL: contact@example.com
